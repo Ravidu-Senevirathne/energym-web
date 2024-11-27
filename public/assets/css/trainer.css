@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+/*Header*/
+
+header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: #000000;
+    padding: 15px 15px;
+}
+header .container {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: default;
+    text-align: left;
+}
+header .logo a span {
+    color: #c11325;
+}
+header .nav {
+    position: fixed;
+    background-color: #c11325;
+    width: 280px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 99;
+    padding: 100px 0px 15px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+
+}
+header .nav.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+header .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+header .nav ul li {
+    display: block;
+}
+header .nav ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    padding: 10px 30px;
+}
+header .nav ul li a.active::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.2;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+header .nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: #000000;
+    opacity: 0.2;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+header .nav ul li a:hover::before {
+    width: 100%;
+}
+header .ham-burger {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+header .ham-burger span {
+    height: 3px;
+    margin-bottom: 8px;
+    display: block;
+    background-color: #ffffff;
+    width: 30px;
+    -webkit-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+header .ham-burger span:nth-child(1) {
+    transform-origin: left top;
+}
+header .ham-burger span:nth-child(2) {
+    transform-origin: left bottom;
+}
+
+header .ham-burger.active span:nth-child(1) {
+    -webkit-transform: rotate(45deg) translateY(-6px);
+    transform: rotate(45deg) translateY(-6px);
+}
+header .ham-burger.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg) translateY(6px);
+    transform: rotate(-45deg) translateY(6px);
+}
+header .ham-burger {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Adjust positioning as needed */
+}
+
+/* Down arrow styles */
+.arrow {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+.user-name {
+    color: white;
+    margin-left: 35rem;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-radius: 15px;
+}
+.arrow {
+    margin-left: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.user-name:hover{
+    background-color: black;
+    border-color: white;
+    animation-duration: 2s;
+}
+
+.dropdown-button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 210px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the menu items */
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.user-dropdown {
+    position: relative;
+}
+
+.user-name {
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-radius: 15px;
+}
+
+.arrow {
+    margin-left: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.user-name:hover {
+    background-color: black;
+    border-color: white;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #c11325;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #d12a3d;
+}
+  .cc {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.profile-details p {
+    margin: 4px 0;
+    color: #555;
+}
+
+/* Dashboard options */
+.dashboard-options {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dashboard-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-options li {
+    margin-bottom: 10px;
+}
+
+.dashboard-options a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dashboard-options a:hover {
+    text-decoration: underline;
+}
+
+/* Chart container */
+.chart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Recent activities */
+.recent-activities {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recent-activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activities li {
+    margin-bottom: 10px;
+}
+
+
+.userInfoImage{
+    cursor: pointer;
+}
+.profile-picture{
+    cursor: pointer;
+}
+#profilePictureForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.trainer{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.pref,
+.schedule,
+.paysheet,
+.notification
+ {
+    background-color: #c11325;
+    color: white;
+    border: 2px solid #c11325; /* Added border */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 100%;
+    width: 200%;
+
+}
+.pref:hover,
+.schedule:hover,
+.paysheet:hover,
+.notification:hover {
+    background-color: white;
+    color: #c11325;
+    border-color: #c11325; /* Change border color on hover */
+}

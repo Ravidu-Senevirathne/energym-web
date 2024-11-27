@@ -1,0 +1,11 @@
+ .logo a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: default;
+    text-align: left;
+}
+.logo a span {
+    color: #c11325;
+}

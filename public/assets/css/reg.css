@@ -1,0 +1,83 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the image stays behind other content */
+    background-image: url("../assets/images/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Set background color for the page */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.reg {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.8
+    ); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reg input[type="text"],
+.reg input[type="password"],
+.reg input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.logintext {
+    text-decoration: none;
+    color: blue;
+}
+.logintext:hover {
+    color: red;
+}
+.transparent-button {
+    display: block;
+    margin: 0 auto;
+    background-color: #007bff;
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.transparent-button:hover {
+    background-color: red;
+    color: white;
+}

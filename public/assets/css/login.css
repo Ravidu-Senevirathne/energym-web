@@ -1,0 +1,180 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    border: 5px solid white;
+    width: 80%;
+    display: flex;
+    background-color: black;
+    height: 80%;
+}
+
+.login-background {
+    width: 80%;
+}
+
+.image {
+    background-color: black;
+
+    width: 50%;
+    max-height: 200px; /* Adjust the maximum height as needed */
+    margin-left: 100px;
+    border-width: 2px;
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the image a block element to prevent any text from wrapping around it */
+    margin-left: 100px;
+    border: 2px solid white;
+    margin-top: 5px;
+}
+.form-container {
+    width: 50%; /* Set width for the form container */
+    padding: 20px; /* Add padding to the form container */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    background-color: black; /* Set background color to black */
+    margin-right: 20px;
+}
+
+form {
+    margin-top: 100px;
+    display: flex; /* Use flexbox to arrange form items horizontally */
+    flex-direction: column; /* Arrange form items in a column */
+}
+
+.form-input {
+    margin-bottom: 10px; /* Add spacing between form inputs */
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    padding: 10px; /* Add padding to form inputs and button */
+    border: 1px solid #ccc; /* Add border to form inputs */
+    border-radius: 5px; /* Add border radius to form inputs */
+    width: 100%; /* Set inputs to fill the width of the container */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: #c11325;
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 120px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    border-color: white;
+    animation-duration: 2s;
+}
+p {
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    color: #c11325;
+    text-decoration: none;
+    font-size: 28px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+    color: blue;
+    animation-duration: 3s;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+/* Add CSS for the error message */
+#errorMessage {
+    color: red;
+    display: none;
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.select-container::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #c11325;
+    color: white;
+    border: 3px solid white hidden;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: large;
+    padding-right: 30px; /* Adjust to accommodate the down arrow */
+    margin-top: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.select-container select:hover {
+    background-color: black;
+    border-color: white;
+    animation-duration: 2s;
+}
+
+.select-container select:hover,
+.select-container select.clicked {
+    background-color: black;
+    border-color: white;
+    animation-duration: 2s;
+}
+.login-btn{
+    margin-top: 50px;
+}
+select[name="role"] {
+    color: white;
+    background-color: #c11325;
+    border: 5px solid white hidden;
+    width: 180px;
+    height: 50px;
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: large;
+    margin-top: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+}
+
+select[name="role"]:hover {
+    background-color: black;
+    border-color: white;
+    animation-duration: 2s;
+}
+.form-group{
+    margin-right: 50px;
+}
